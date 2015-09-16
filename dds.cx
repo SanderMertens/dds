@@ -1,0 +1,21 @@
+#package ::dds
+
+class Connector::
+    domainId: uint32
+    partition: string
+    @scope: object
+    int16 construct()
+    void destruct()
+
+    void onDeclare() observer
+    void onUpdate() observer
+
+    dp: word, private
+    sub: word, private
+    pub: word, private
+    topic_cortoDeclare: word, private
+    topic_cortoUpdate: word, private
+    dr_cortoDeclare: word, private
+    dr_cortoUpdate: word, private
+    dw_cortoDeclare: word, private
+    dw_cortoUpdate: word, private

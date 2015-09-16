@@ -1,0 +1,15 @@
+
+module ddsx {
+	struct CortoDeclare {
+		string parent;
+		string name;
+		string type;
+	};
+	#pragma keylist CortoDeclare parent name
+
+	struct CortoUpdate {
+		string id;
+		string value;
+	};
+	#pragma keylist CortoUpdate id
+};
