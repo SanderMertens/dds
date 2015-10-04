@@ -6,7 +6,6 @@
  * code in interface functions isn't replaced when code is re-generated.
  */
 
-#define dds_LIB
 #include "dds.h"
 
 int ddsMain(int argc, char* argv[]) {

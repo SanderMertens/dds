@@ -12,4 +12,11 @@ module ddsx {
 		string value;
 	};
 	#pragma keylist CortoUpdate id
+
+	struct CortoInvoke {
+		string instance;
+		string method;
+		sequence<octet> args;
+	};
+	#pragma keylist CortoInvoke
 };

@@ -35,4 +35,20 @@ struct ddsx_CortoUpdate {
     DDS_string value;
 };
 
+#ifndef _ddsx_CortoInvoke_defined
+#define _ddsx_CortoInvoke_defined
+#ifdef __cplusplus
+struct ddsx_CortoInvoke;
+#else /* __cplusplus */
+typedef struct ddsx_CortoInvoke ddsx_CortoInvoke;
+#endif /* __cplusplus */
+#endif /* _ddsx_CortoInvoke_defined */
+ ddsx_CortoInvoke *ddsx_CortoInvoke__alloc (void);
+
+struct ddsx_CortoInvoke {
+    DDS_string instance;
+    DDS_string method;
+    DDS_sequence_octet args;
+};
+
 #endif

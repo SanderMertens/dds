@@ -1,21 +1,27 @@
 #package ::dds
 
-class Connector::
+class Connector: replicator,hidden::
+    alias mount: replicator::mount
     domainId: uint32
     partition: string
     @scope: object
     int16 construct()
     void destruct()
 
-    void onDeclare() observer
-    void onUpdate() observer
+    void onDeclare(object observable)
+    void onUpdate(object observable)
+    void onDelete(object observable)
+    void onInvoke(object instance, function f, octetseq args)
 
     dp: word, private
     sub: word, private
     pub: word, private
     topic_cortoDeclare: word, private
     topic_cortoUpdate: word, private
+    topic_cortoInvoke: word, private
     dr_cortoDeclare: word, private
     dr_cortoUpdate: word, private
+    dr_cortoInvoke: word, private
     dw_cortoDeclare: word, private
     dw_cortoUpdate: word, private
+    dw_cortoInvoke: word, private

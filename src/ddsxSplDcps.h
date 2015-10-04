@@ -38,4 +38,18 @@ struct _ddsx_CortoUpdate {
     c_string value;
 };
 
+extern const char *ddsx_CortoInvoke_metaDescriptor[];
+extern const c_ulong ddsx_CortoInvoke_metaDescriptorArrLength;
+extern c_metaObject __ddsx_CortoInvoke__load (c_base base);
+extern const char * __ddsx_CortoInvoke__keys (void);
+extern const char * __ddsx_CortoInvoke__name (void);
+struct _ddsx_CortoInvoke ;
+extern  c_bool __ddsx_CortoInvoke__copyIn(c_base base, void *from, void *to);
+extern  void __ddsx_CortoInvoke__copyOut(void *_from, void *_to);
+struct _ddsx_CortoInvoke {
+    c_string instance;
+    c_string method;
+    c_sequence args;
+};
+
 #endif
